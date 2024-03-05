@@ -1,4 +1,4 @@
-package com.anggadps.mymoviedb
+package com.anggadps.mymoviedb.models
 
 data class Movie(
     val id: Long,

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anggadps.mymoviedb.databinding.ActivityMainBinding
+import com.anggadps.mymoviedb.models.MovieResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
