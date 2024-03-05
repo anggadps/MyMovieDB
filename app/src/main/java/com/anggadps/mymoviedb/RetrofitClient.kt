@@ -1,5 +1,6 @@
 package com.anggadps.mymoviedb
 
+import com.anggadps.mymoviedb.services.MovieApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

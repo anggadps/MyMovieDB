@@ -1,5 +1,6 @@
-package com.anggadps.mymoviedb
+package com.anggadps.mymoviedb.services
 
+import com.anggadps.mymoviedb.RetrofitClient
 import com.anggadps.mymoviedb.models.MovieResponse
 import retrofit2.Call
 import retrofit2.http.GET

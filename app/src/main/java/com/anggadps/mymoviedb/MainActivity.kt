@@ -1,15 +1,21 @@
+// File: MainActivity.kt
 package com.anggadps.mymoviedb
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.anggadps.mymoviedb.adapters.MovieAdapter
 import com.anggadps.mymoviedb.databinding.ActivityMainBinding
+import com.anggadps.mymoviedb.models.Movie
 import com.anggadps.mymoviedb.models.MovieResponse
+import com.anggadps.mymoviedb.services.MovieItemClickListener
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MovieItemClickListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var movieAdapter: MovieAdapter
@@ -19,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        movieAdapter = MovieAdapter()
-        binding.recyclerViewMovies.layoutManager = LinearLayoutManager(this)
+        movieAdapter = MovieAdapter(this)
+        binding.recyclerViewMovies.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerViewMovies.adapter = movieAdapter
 
         fetchNowPlayingMovies()
@@ -42,5 +48,13 @@ class MainActivity : AppCompatActivity() {
                 // Handle failure
             }
         })
+    }
+
+    override fun onMovieItemClick(movie: Movie) {
+        Log.i("=================", "=================")
+        Log.d("Movie Clicked", movie.title)
+        Log.d("Movie Id", movie.id.toString())
+        Log.i("=================", "=================")
+        // Example: You can start DetailActivity here and pass movie data using Intent
     }
 }
