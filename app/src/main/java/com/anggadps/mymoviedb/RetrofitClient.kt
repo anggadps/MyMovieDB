@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     private const val BASE_URL = "https://api.themoviedb.org/3/"
-    private const val API_KEY = "6bd8181a12943c03a5c2ee1eddd288b7"
+    private const val API_KEY = "#"
     fun getApiKey(): String {
         return API_KEY
     }
