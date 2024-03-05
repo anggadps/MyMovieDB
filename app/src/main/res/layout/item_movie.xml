@@ -9,7 +9,7 @@
     android:layout_margin="8dp">
 
     <ImageView
-        android:id="@+id/imageViewPosterDetail"
+        android:id="@+id/imageViewPoster"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -18,7 +18,7 @@
         android:foreground="@drawable/shadow_overlay" />
 
     <TextView
-        android:id="@+id/textViewTitleDetail"
+        android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"

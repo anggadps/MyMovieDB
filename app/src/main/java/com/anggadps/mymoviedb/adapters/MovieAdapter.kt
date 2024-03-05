@@ -1,4 +1,3 @@
-// File: MovieAdapter.kt
 package com.anggadps.mymoviedb.adapters
 
 import android.view.LayoutInflater
