@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), MovieItemClickListener {
         setContentView(binding.root)
 
         movieAdapter = MovieAdapter(this)
-        binding.recyclerViewMovies.layoutManager = GridLayoutManager(this, 2)
+        binding.recyclerViewMovies.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewMovies.adapter = movieAdapter
 
         fetchNowPlayingMovies()
